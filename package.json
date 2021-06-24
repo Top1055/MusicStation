@@ -1,0 +1,16 @@
+{
+  "name": "musicstation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nw src/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nw": "^0.54.0-sdk",
+    "nw-builder": "^3.5.7"
+  }
+}

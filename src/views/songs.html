@@ -2,6 +2,8 @@
     <head>
         <title>Music Station - Playlists</title>
         <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/player.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
     </head>
     <body>
         <ul class="sidebar">
@@ -21,5 +23,34 @@
         <div class="content">
             <img class="logo" src="https://rejuvage.com/wp-content/uploads/2017/02/secondary-banner-placeholder.jpg">
         </div>
+
+<div class="music-container" id="music-container">
+
+    <h4 id="title"></h4>
+
+    <div class="progress-container" id="progress-container">
+        <div class="progress" id="progress"></div>
+    </div>
+
+    <audio src="" id="audio"></audio>
+
+    <div class="navigation">
+
+        <button id="prev" class="action-btn">
+            <i class="fas fa-backward"></i>
+        </button>
+
+        <button id="play" class="action-btn action-btn-big">
+            <i class="fas fa-play"></i>
+        </button>
+
+        <button id="next" class="action-btn">
+            <i class="fas fa-forward"></i>
+        </button>
+
+    </div>
+</div>
+
     </body>
 </html>
+<script src="../app/songs.js"></script>

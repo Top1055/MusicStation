@@ -84,3 +84,8 @@ body {
     height: 200px;
     margin-bottom: 5%;
 }
+
+.modal {
+    display: none;
+    position: absolute;
+}

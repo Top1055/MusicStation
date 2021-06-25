@@ -5,7 +5,34 @@
         <link rel="stylesheet" href="../styles/download.css">
     </head>
     <body>
-        <div include-html="html/navbar.html"></div>
+        <ul class="sidebar">
+            <li>
+                <a href="main.html" class="bigger">
+                    <img src="../assets/playlistsIcon.png">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="download.html" class="bigger">
+                    <img src="../assets/DownloadIcon.png">
+                    Download
+                </a>
+            </li>
+
+            <li><hr></li>
+
+            <li>
+                <button id="createpl">
+                    <img src="../assets/createIcon.png">
+                    New playlist
+                </button>
+            </li>
+            <li>
+                <a href="play.html">
+                    Songs
+                </a>
+            </li>
+        </ul>
 
         <div class="content">
             <img class="logo" src="https://rejuvage.com/wp-content/uploads/2017/02/secondary-banner-placeholder.jpg">
@@ -15,5 +42,4 @@
     </body>
 </html>
 <script src="../app/main.js"></script>
-<script>includeHTML();</script>
 <script src="../app/download.js" ></script>

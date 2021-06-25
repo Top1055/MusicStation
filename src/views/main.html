@@ -37,17 +37,17 @@
             <img class="logo" src="https://rejuvage.com/wp-content/uploads/2017/02/secondary-banner-placeholder.jpg">
         </div>
 
+        <!-- The Modal -->
         <div class="modal">
-            <span onclick="document.querySelector('.modal').style.display='none'" class="close" title="Close Modal">X</span>
-            <div class="container">
-                <h1>Create new playlist</h1>
-                <input id="playlistName" type="text" placeholder="Songs..." name="playlistName">
 
-                <div class="clearfix">
-                    <button type="button" class="deletebtn">Create</button>
-                    <button type="button" onclick="document.querySelector('.modal').style.display='none'" class="cancelbtn">Cancel</button>
-                </div>
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">X</span>
+                <p>Create new playlist</p>
+                <input id="plname" type="text" placeholder="Playlist name...">
+                <button>Create</button>
             </div>
+
         </div>
 
     </body>

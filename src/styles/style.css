@@ -19,8 +19,29 @@
     padding: 2% 0%;
 }
 
-.sidebar a:hover {
+.sidebar button {
+    cursor: pointer;
     color: #ffffff;
+    font-size: 24;
+    font-weight: normal;
+    display: block;
+    text-decoration: none;
+    border: none;
+    padding: 2% 0%;
+    background-color: rgb(28, 28, 28);
+}
+
+.sidebar button:hover {
+    color: #b0b0b0;
+}
+
+.sidebar button img {
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar a:hover {
+    color: #b0b0b0;
 }
 
 .sidebar li a img {
@@ -43,6 +64,9 @@ body {
     font-size: 24;
     margin: 0;
     background-color: rgb(20, 20, 20);
+}
+
+* {
     color: #f1f1f1;
     font-family: 'Montserrat', sans-serif;
 }
@@ -59,14 +83,4 @@ body {
     margin-right: auto;
     height: 200px;
     margin-bottom: 5%;
-}
-
-/* unvisited link */
-a:link {
-    color: #f1f1f1;
-}
-
-/* visited link */
-a:visited {
-    color: #f1f1f1;
 }

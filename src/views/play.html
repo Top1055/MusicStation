@@ -6,34 +6,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
     </head>
     <body>
-        <ul class="sidebar">
-            <li>
-                <a href="main.html" class="bigger">
-                    <img src="../assets/playlistsIcon.png">
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="download.html" class="bigger">
-                    <img src="../assets/DownloadIcon.png">
-                    Download
-                </a>
-            </li>
-
-            <li><hr></li>
-
-            <li>
-                <button>
-                    <img src="../assets/createIcon.png">
-                    New playlist
-                </button>
-            </li>
-            <li>
-                <a href="play.html">
-                    Songs
-                </a>
-            </li>
-        </ul>
+        <div include-html="html/navbar.html"></div>
 
         <div class="content">
             <img class="logo" src="https://rejuvage.com/wp-content/uploads/2017/02/secondary-banner-placeholder.jpg">
@@ -69,4 +42,5 @@
     </body>
 </html>
 <script src="../app/main.js"></script>
+<script>includeHTML();</script>
 <script src="../app/songs.js"></script>

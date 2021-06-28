@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Music Station - Playlists</title>
+        <title>Music Station - Download</title>
         <link rel="stylesheet" href="../styles/style.css">
         <link rel="stylesheet" href="../styles/download.css">
     </head>
@@ -39,6 +39,20 @@
             <input id="search" type="text" placeholder="Youtube link..." name="search" onkeydown="keyCode(event)">
             <p id="status"></p>
         </div>
+
+        <!-- The Modal -->
+        <div class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">X</span>
+                <p>Create new playlist</p>
+                <input id="plname" type="text" placeholder="Playlist name...">
+                <button id="createBtn">Create</button>
+            </div>
+
+        </div>
+
     </body>
 </html>
 <script src="../app/main.js"></script>

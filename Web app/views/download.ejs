@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Music Station - Download</title>
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/download.css">
+    </head>
+    <body>
+        <ul class="sidebar">
+            <li>
+                <a href="index.html" class="bigger">
+                    <img src="../assets/playlistsIcon.png">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="download.html" class="bigger">
+                    <img src="../assets/DownloadIcon.png">
+                    Download
+                </a>
+            </li>
+
+            <li><hr></li>
+
+            <li>
+                <button id="createpl">
+                    <img src="../assets/createIcon.png">
+                    New playlist
+                </button>
+            </li>
+            <li>
+                <a href="play.html">
+                    Songs
+                </a>
+            </li>
+        </ul>
+
+        <div class="content">
+            <img class="logo" src="https://rejuvage.com/wp-content/uploads/2017/02/secondary-banner-placeholder.jpg">
+            <input id="search" type="text" placeholder="Youtube link..." name="search" onkeydown="keyCode(event)">
+            <p id="status"></p>
+        </div>
+
+        <!-- The Modal -->
+        <div class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">X</span>
+                <p>Create new playlist</p>
+                <input id="plname" type="text" placeholder="Playlist name...">
+                <button id="createBtn">Create</button>
+            </div>
+
+        </div>
+
+    </body>
+</html>
+<script src="../app/main.js"></script>
+<script src="../app/download.js" ></script>

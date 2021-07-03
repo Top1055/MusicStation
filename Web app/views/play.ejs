@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Music Station - All Songs</title>
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/player.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <ul class="sidebar">
+            <li>
+                <a href="index.html" class="bigger">
+                    <img src="../assets/playlistsIcon.png">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="download.html" class="bigger">
+                    <img src="../assets/DownloadIcon.png">
+                    Download
+                </a>
+            </li>
+
+            <li><hr></li>
+
+            <li>
+                <button id="createpl">
+                    <img src="../assets/createIcon.png">
+                    New playlist
+                </button>
+            </li>
+            <li>
+                <a href="play.html">
+                    Songs
+                </a>
+            </li>
+        </ul>
+
+        <div class="content">
+            <img class="logo" src="https://rejuvage.com/wp-content/uploads/2017/02/secondary-banner-placeholder.jpg">
+        </div>
+
+        <div class="music-container" id="music-container">
+
+            <h4 id="title"></h4>
+
+            <div class="progress-container" id="progress-container">
+                <div class="progress" id="progress"></div>
+            </div>
+
+            <audio src="" id="audio"></audio>
+
+            <div class="navigation">
+
+                <button id="prev" class="action-btn">
+                    <i class="fas fa-backward"></i>
+                </button>
+
+                <button id="play" class="action-btn action-btn-big">
+                    <i class="fas fa-play"></i>
+                </button>
+
+                <button id="next" class="action-btn">
+                    <i class="fas fa-forward"></i>
+                </button>
+
+            </div>
+        </div>
+
+        <!-- The Modal -->
+        <div class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">X</span>
+                <p>Create new playlist</p>
+                <input id="plname" type="text" placeholder="Playlist name...">
+                <button id="createBtn">Create</button>
+            </div>
+
+        </div>
+
+    </body>
+</html>
+<script src="../app/main.js"></script>
+<script src="../app/songs.js"></script>

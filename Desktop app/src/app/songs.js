@@ -15,10 +15,17 @@ const progress = document.querySelector('.progress')
 const progressContainer = document.querySelector('.progress-container')
 const title = document.querySelector('#title')
 
-//Song titles
-fs.readdirSync(songsPath.substring(1)).forEach(file => {
-    songs.push(file)
-});
+//Fetch songs
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+if(urlParams.get('name') == null) {
+    fs.readdirSync(songsPath.substring(1)).forEach(file => {
+        songs.push(file)
+    });
+} else {
+    // fetch from playlist
+}
 
 //Keep track of songs
 let songIndex = 0;

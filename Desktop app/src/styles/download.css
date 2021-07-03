@@ -19,3 +19,17 @@
 #status {
     text-align: center;
 }
+
+#playlist {
+    color: rgb(20, 20, 20);
+    background-color: #f1f1f1;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: 67%;
+    margin-top: 1%;
+}
+
+option {
+    color: rgb(20, 20, 20);
+}

@@ -34,8 +34,8 @@ function createPl(name) {
 
 function fetchPlaylists() {
     var ul = document.querySelector('.sidebar')
-    var li = document.createElement("li");
     fs.readdirSync(plistPath.substring(1)).forEach(file => {
+        var li = document.createElement("li");
         li.innerHTML = `<a href='playlist.html?name=` + file + `'>` + file.slice(0, -5) + `</a>`
         ul.appendChild(li);
     });

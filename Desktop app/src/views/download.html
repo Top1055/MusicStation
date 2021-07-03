@@ -36,7 +36,10 @@
 
         <div class="content">
             <img class="logo" src="https://rejuvage.com/wp-content/uploads/2017/02/secondary-banner-placeholder.jpg">
-            <input id="search" type="text" placeholder="Youtube link..." name="search" onkeydown="keyCode(event)">
+            <input disabled id="search" type="text" placeholder="Please select a playlist..." name="search" onkeydown="keyCode(event)">
+            <select name="playlist" id="playlist" onchange="selectPlaylist()">
+                <option value="none">Choose a playlist</option>
+            </select>
             <p id="status"></p>
         </div>
 

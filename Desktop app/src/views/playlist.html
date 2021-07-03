@@ -64,6 +64,11 @@
                 </button>
 
             </div>
+
+            <div class='volume-container' id='volume-container'>
+                <div class='volume' id='volume'></div>
+            </div>
+
         </div>
 
         <!-- The Modal -->
@@ -83,8 +88,3 @@
 </html>
 <script src="../app/main.js"></script>
 <script src="../app/songs.js"></script>
-<script>
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    document.getElementById('name').innerHTML = urlParams.get('name')
-</script>

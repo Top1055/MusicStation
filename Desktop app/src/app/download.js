@@ -36,7 +36,24 @@ function dlyt(ID, URL, title) {
         format: 'mp3',
         quality: 'highestaudio',
         filter: 'audioonly'
-    }).pipe(fs.createWriteStream(PATH + title + '.song'));
+    }).pipe(fs.createWriteStream(PATH + ID + '.song'));
+
+    var data = fs.readFileSync(`${plistPath.substring(1)}${select.value}`, 'utf8')
+    var index = 1
+
+    if (data != "") {
+        data = data.split('\n')
+        data = data[data.length - 2].split(',')
+        index = data[0]
+    }
+
+    while(title.includes(',')) {
+        title.replace(',', '.')
+    }
+    fs.appendFile(`${plistPath.substring(1)}${select.value}`, `${index},${ID}.song,${title},` + '\n', function (err) {
+        if (err) throw err;
+    });
+
     sts.innerHTML = "Download Complete!"
 }
 

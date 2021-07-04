@@ -32,11 +32,12 @@ function getName(URL, callback) {
 
 function dlyt(ID, URL, title) {
 
-    ytdl(URL, {
+    download = ytdl(URL, {
         format: 'mp3',
         quality: 'highestaudio',
         filter: 'audioonly'
-    }).pipe(fs.createWriteStream(PATH + ID + '.song'));
+    })
+    download.pipe(fs.createWriteStream(PATH + ID + '.mp3'));
 
     var data = fs.readFileSync(`${plistPath.substring(1)}${select.value}`, 'utf8')
     var index = 1
@@ -44,17 +45,19 @@ function dlyt(ID, URL, title) {
     if (data != "") {
         data = data.split('\n')
         data = data[data.length - 2].split(',')
-        index = data[0]
+        index = parseInt(data[0]) + 1
     }
 
     while(title.includes(',')) {
         title.replace(',', '.')
     }
-    fs.appendFile(`${plistPath.substring(1)}${select.value}`, `${index},${ID}.song,${title},` + '\n', function (err) {
+    fs.appendFile(`${plistPath.substring(1)}${select.value}`, `${index},${ID}.mp3,${title},` + '\n', function (err) {
         if (err) throw err;
     });
 
-    sts.innerHTML = "Download Complete!"
+    download.on('finish', function() {
+        sts.innerHTML = "Download Complete!"
+    })
 }
 
 function selectPlaylist() {

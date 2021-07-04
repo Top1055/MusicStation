@@ -14,6 +14,7 @@
 
 #title {
     position: absolute;
+    left: 2%;
 }
 
 .navigation {
@@ -78,4 +79,30 @@
     height: 100%;
     width: 100%;
     border-radius: 15px;
+}
+
+.songs {
+    list-style-type: none;
+}
+
+.songs li {
+    width: 90%;
+    cursor: pointer;
+    background-color: #161616;
+    padding: 1% 2%;
+    outline: #000000;
+    transition: outline ease-in-out 0.1s;
+}
+
+.songs li:hover {
+    outline: #000000 solid;
+}
+
+.songs .number {
+    display: inline-block;
+    margin-right: 10%;
+}
+
+.songs .song-title {
+    display: inline-block;
 }

@@ -1,6 +1,7 @@
 //variables
 const songsPath = '../Songs/';
 const songs = []
+const titles = []
 
 //fetch elements
 const musicContainer = document.querySelector('.music-container')
@@ -13,6 +14,7 @@ const volumeContainer = document.querySelector('.volume-container')
 const progress = document.querySelector('.progress')
 const volume = document.querySelector('.volume')
 const title = document.querySelector('#title')
+const list = document.querySelector("#songs")
 
 //Fetch songs
 const queryString = window.location.search;
@@ -27,8 +29,9 @@ if(urlParams.get('name') == null) {
     // fetch from playlist
     var data = fs.readFileSync(`${plistPath.substring(1)}${urlParams.get('name')}`, 'utf8')
     data = data.split('\n')
-    for(let i = 0; i<data.length; i++) {
+    for(let i = 0; i<data.length - 1; i++) {
         songs.push(data[i].split(',')[1])
+        titles.push(data[i].split(',')[2])
     }
 }
 
@@ -36,12 +39,12 @@ if(urlParams.get('name') == null) {
 let songIndex = 0;
 
 //load song
-loadSong(songs[songIndex])
+loadSong()
 
 //update song details
-function loadSong(song) {
-    title.innerText = song
-    audio.src = songsPath + song
+function loadSong() {
+    title.innerText = titles[songIndex]
+    audio.src = songsPath + songs[songIndex]
 }
 
 function playSong() {
@@ -67,7 +70,7 @@ function prevSong() {
         songIndex--
     }
 
-    loadSong(songs[songIndex])
+    loadSong()
 
     playSong()
 }
@@ -79,7 +82,7 @@ function nextSong() {
         songIndex++
     }
 
-    loadSong(songs[songIndex])
+    loadSong()
 
     playSong()
 }

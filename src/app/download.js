@@ -1,5 +1,6 @@
 //imports
 const ytdl = require('ytdl-core');
+var ytpl = require('ytpl');
 const getYoutubeTitle = require('get-youtube-title')
 
 //vars
@@ -14,6 +15,7 @@ var URLinput = document.getElementById("search")
 function keyCode(event) {
     var x = event.keyCode;
     if (x == 13) {
+        test(URLinput.value)
         if (ytdl.validateURL(URLinput.value)) {
             sts.innerHTML = "Downloading..."
             getName(URLinput.value, dlyt)
@@ -22,6 +24,12 @@ function keyCode(event) {
             sts.innerHTML = "Invalid URL"
         }
     }
+}
+
+async function test(url) {
+    ID = url.split("=")[1]
+    const playlist = await ytpl(ID);
+    console.log(playlist)
 }
 
 function getName(URL, callback) {

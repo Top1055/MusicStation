@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nw src/"
+    "dev": "nw src/",
+    "prod": "nwbuild --platforms win32,win64 --buildDir dist/ src/"
   },
   "keywords": [],
   "author": "",

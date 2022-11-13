@@ -21,6 +21,7 @@
     "express": "^4.17.1",
     "get-youtube-title": "^1.0.1",
     "sortablejs": "^1.13.0",
-    "ytdl-core": "^4.8.2"
+    "ytdl-core": "^4.8.2",
+    "ytpl": "^2.2.1"
   }
 }
